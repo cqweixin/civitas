@@ -8,7 +8,7 @@
  :remote-repo        {:git-url "https://github.com/ClojureCivitas/clojurecivitas.github.io"
                       :branch  "main"}
  :hide-ui-header     true
- :config/transform   civitas.db/expand-authors
+ ;; :config/transform   civitas.db/expand-authors
  ;; :use-kindly-render true
 
  ;; aliases

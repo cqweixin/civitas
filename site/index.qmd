@@ -4,7 +4,5 @@ image: "images/civitas-icon.svg"
 about:
   template: jolla
 ---
-[About](about.qmd)
-[Posts](posts.qmd)
-[Authors](civitas/authors.qmd)
-[Explorer](civitas/explorer.qmd)
+[关于](about.qmd)
+[文章](posts.qmd)
