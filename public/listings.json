@@ -1,0 +1,16 @@
+[
+  {
+    "listing": "/posts.html",
+    "items": [
+      "/ml/study01.html"
+    ]
+  },
+  {
+    "listing": "/drafts.html",
+    "items": []
+  },
+  {
+    "listing": "/pages.html",
+    "items": []
+  }
+]

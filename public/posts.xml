@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Civitas个人小站</title>
+<link>https://clojurecivitas.github.io/posts.html</link>
+<atom:link href="https://clojurecivitas.github.io/posts.xml" rel="self" type="application/rss+xml"/>
+<description></description>
+<image>
+<url>https://clojurecivitas.github.io/images/civitas-icon.svg</url>
+<title>Civitas个人小站</title>
+<link>https://clojurecivitas.github.io/posts.html</link>
+</image>
+<generator>quarto-1.8.27</generator>
+<lastBuildDate>Mon, 19 Jan 2026 16:00:00 GMT</lastBuildDate>
+<item>
+  <title>机器学习第一阶段：筑基篇 - 打好坚实基础</title>
+  <dc:creator>weixin </dc:creator>
+  <link>https://clojurecivitas.github.io/ml/study01.html</link>
+  <description><![CDATA[  ]]></description>
+  <guid>https://clojurecivitas.github.io/ml/study01.html</guid>
+  <pubDate>Mon, 19 Jan 2026 16:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>

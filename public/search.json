@@ -1,0 +1,65 @@
+[
+  {
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "文章",
+    "section": "",
+    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\n机器学习第一阶段：筑基篇 - 打好坚实基础\n\n\n\n\n\n\n\n\nJan 20, 2026\n\n\nweixin\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "ml/study01.html",
+    "href": "ml/study01.html",
+    "title": "机器学习第一阶段：筑基篇 - 打好坚实基础",
+    "section": "",
+    "text": "在接触复杂的算法之前，你需要先搭建起支撑知识大厦的地基。 这个阶段的目标是掌握必要的数学、编程和数据分析技能。\n接下来我们可以看一个案例。 测试数据 house_prices.csv 文件内容：\n\n\n\n\n\n面积\n价格\n房龄\n卧室数\n城市\n\n\n45\n120\n15\n1\n北京\n\n\n60\n180\n12\n2\n北京\n\n\n75\n260\n8\n2\n北京\n\n\n90\n320\n6\n3\n北京\n\n\n110\n420\n5\n3\n北京\n\n\n130\n520\n3\n4\n北京\n\n\n50\n80\n20\n1\n成都\n\n\n70\n120\n15\n2\n成都\n\n\n85\n150\n12\n3\n成都\n\n\n100\n190\n10\n3\n成都\n\n\n120\n240\n8\n4\n成都\n\n\n140\n300\n5\n4\n成都\n\n\n55\n150\n18\n1\n上海\n\n\n70\n220\n14\n2\n上海\n\n\n85\n300\n10\n2\n上海\n\n\n100\n380\n8\n3\n上海\n\n\n120\n480\n6\n3\n上海\n\n\n150\n650\n4\n4\n上海\n\n\n40\n60\n22\n1\n武汉\n\n\n65\n95\n16\n2\n武汉\n\n\n80\n130\n12\n2\n武汉\n\n\n95\n170\n9\n3\n武汉\n\n\n115\n220\n7\n3\n武汉\n\n\n135\n280\n5\n4\n武汉\n\n\n\n\n\n接下来，我们生成一些散点图"
+  },
+  {
+    "objectID": "drafts.html",
+    "href": "drafts.html",
+    "title": "草稿",
+    "section": "",
+    "text": "No matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "关于",
+    "section": "",
+    "text": "Clojure Civitas makes it easy for you to publish Clojure ideas and explorations without the overhead of setting up a new project, blog, or repo. Whether you’re sketching out a quick experiment or writing a deeper post, just fork this repo, create a namespace, write, commit and submit a pull request. This is your shared scratch space."
+  },
+  {
+    "objectID": "about.html#usage",
+    "href": "about.html#usage",
+    "title": "关于",
+    "section": "Usage",
+    "text": "Usage\n\nFork the Clojure Civitas repository\nAdd your new namespace to src\nWrite code and markdown comments\nSubmit a pull request\nPublished\n\nSee README.md for more information, or browse the existing namespaces in src."
+  },
+  {
+    "objectID": "about.html#rationale",
+    "href": "about.html#rationale",
+    "title": "关于",
+    "section": "Rationale",
+    "text": "Rationale\nNamespaces with markdown comments are a natural fit for interactive, literate programming. ClojureCivitas makes it easy to experience the pleasure of this style of coding. Build up an idea in your REPL, in your favorite editor, and share it with others.\nProblem: There is incidental complexity in literate programming setup and publishing. Creating a new project, configuring a blog, choosing themes and styling, organizing files, adding analytics, and thinking about SEO all add overhead. This friction gets in the way of creativity, exploration, writing, and sharing. Many people are missing out on the joy of interactive programming as a tool for thought.\nSolution: A clear path for publishing Clojure ideas and explorations.\nHope: As writers share their ideas, readers are encouraged to try literate programming, and share their own insights and experiments.\n\nWhy markdown in code?\nWe value reproducible artifacts. Start with code. Make it work. Then tell the story.\n\n\nMake Publishing Clojure Namespaces Easy\nCreators should only have to care about their code, not setting up projects or hosting workflows. Let’s make a shared, organized platform for short experiments, tutorials, notes, and blog posts.\n\n\nBuild a Database of Knowledge\nCivitas aggregates structured metadata about the content it hosts and links it to other Clojure resources. We can build a connected web of ideas, showing how concepts relate, what builds on what, and where to go next. A hex-grid interface presents these relationships visually. Each notebook can declare prerequisites, alternatives, and follow-ups. This helps learners discover next steps, helps educators design coherent learning paths, and enables the community to improve content over time. The goal is to make the Clojure knowledge ecosystem easier to explore and navigate.\n\n\n\nNon-linear exploration\n\n\nNavigate your own path through interconnected topics.\n\n\n\n\nLiterate by design\n\n\nWrite notebooks and situate them in a broader context by linking ideas.\n\n\n\n\nCommunity supported growth\n\n\nThe best resources rise through collective refinement.\n\n\n\nAn open effort to structure learning resources with meaningful connections.\n\n\nEmbrace Alternatives\nClojure Civitas does not aim to centralize Clojure knowledge. Rather it hopes to amplify existing resources, connect with them, and add a place in between for raw ideas and creative experiments."
+  },
+  {
+    "objectID": "about.html#how-it-works",
+    "href": "about.html#how-it-works",
+    "title": "关于",
+    "section": "How it Works",
+    "text": "How it Works\n\nMinimal Moderation and Curation\nContent is submitted via Pull Requests, which are reviewed to prevent abuse. A small team of reviewers ensures quick turnaround. Community representatives are available to assist and guide contributors.\n\n\nMetadata Creation\nMetadata is provided by authors. Future improvements may include automated extraction and smarter linking to enrich the knowledge base.\n\n\nAnalytics\nPage view analytics are publicly available. See the Clojure Civitas Analytics Dashboard.\n\n\nTechnical Details\nMade with Clay. See the README.md in the repository for contribution guidelines and technical details."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Clojure Civitas",
+    "section": "",
+    "text": "关于 文章"
+  },
+  {
+    "objectID": "pages.html",
+    "href": "pages.html",
+    "title": "Pages",
+    "section": "",
+    "text": "No matching items"
+  }
+]
