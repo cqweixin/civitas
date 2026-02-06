@@ -22,6 +22,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -359,7 +394,38 @@ ul.task-list li input[type="checkbox"] {
 <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" type="text/javascript"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/2.20.0/plotly.min.js" type="text/javascript"></script>
 <p>在接触复杂的算法之前，你需要先搭建起支撑知识大厦的地基。 这个阶段的目标是掌握必要的数学、编程和数据分析技能。</p>
-<p>接下来我们可以看一个案例。 测试数据 house_prices.csv 文件内容：</p>
+<section id="核心技能一编程语言clojure" class="level2">
+<h2 class="anchored" data-anchor-id="核心技能一编程语言clojure">核心技能一：编程语言（Clojure）</h2>
+<p>使用Clojure可以使我们更关注于业务本身而不是语法。</p>
+<p>接下来我们可以看一个案例。</p>
+<p>测试数据 house_prices内容：</p>
+<div class="sourceClojure">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>(<span class="bu">def</span><span class="fu"> house-prices </span>(csv/read-csv <span class="st">"面积,价格,房龄,卧室数,城市</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="st">45,120,15,1,北京</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="st">60,180,12,2,北京</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="st">75,260,8,2,北京</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="st">90,320,6,3,北京</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="st">110,420,5,3,北京</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="st">130,520,3,4,北京</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="st">50,80,20,1,成都</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="st">70,120,15,2,成都</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="st">85,150,12,3,成都</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="st">100,190,10,3,成都</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="st">120,240,8,4,成都</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="st">140,300,5,4,成都</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="st">55,150,18,1,上海</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="st">70,220,14,2,上海</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="st">85,300,10,2,上海</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="st">100,380,8,3,上海</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="st">120,480,6,3,上海</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="st">150,650,4,4,上海</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="st">40,60,22,1,武汉</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="st">65,95,16,2,武汉</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="st">80,130,12,2,武汉</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="st">95,170,9,3,武汉</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="st">115,220,7,3,武汉</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="st">135,280,5,4,武汉"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <div class="clay-table">
 <div class="table-responsive">
 <table class="table table-hover clay-table caption-top">
@@ -543,12 +609,36 @@ ul.task-list li input[type="checkbox"] {
 </table>
 </div>
 </div>
-<p>接下来，我们生成一些散点图</p>
+<p>执行如下代码，我们可以生成一些散点图</p>
+<div class="sourceClojure">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode clojure code-with-copy"><code class="sourceCode clojure"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>(<span class="kw">let</span> [data (<span class="kw">map</span> (<span class="kw">partial</span> <span class="kw">zipmap</span> [<span class="at">:size</span> <span class="at">:price</span> <span class="at">:age</span> <span class="at">:room</span> <span class="at">:city</span>]) (<span class="kw">rest</span> house-prices))]</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  (kind/plotly {<span class="at">:data</span> [{<span class="at">:x</span> (<span class="kw">map</span> <span class="at">:size</span> data)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>                        <span class="at">:y</span> (<span class="kw">map</span> <span class="at">:price</span> data)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>                        <span class="at">:type</span> <span class="at">:scatter</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>                        <span class="at">:marker</span> {<span class="at">:size</span> <span class="dv">10</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>                                 <span class="at">:colorscale</span> <span class="at">:Viridis</span>}</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>                        <span class="at">:mode</span> <span class="at">:markers</span>}]</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>                <span class="at">:layout</span> {<span class="at">:title</span> <span class="st">"房屋面积 VS价格"</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>                         <span class="at">:xaxis</span> {<span class="at">:title</span> <span class="st">"面积（平方米）"</span>}</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>                         <span class="at">:yaxis</span> {<span class="at">:title</span> <span class="st">"价格（万元）"</span>}}</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>                <span class="at">:style</span> {<span class="at">:width</span> <span class="st">"300px"</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>                        <span class="at">:height</span> <span class="st">"300px"</span>}}))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <div style="height:auto;width:100%;"><script>Plotly.newPlot(document.currentScript.parentElement, [{"x":["45","60","75","90","110","130","50","70","85","100","120","140","55","70","85","100","120","150","40","65","80","95","115","135"],"y":["120","180","260","320","420","520","80","120","150","190","240","300","150","220","300","380","480","650","60","95","130","170","220","280"],"type":"scatter","marker":{"size":10,"colorscale":"Viridis"},"mode":"markers"}], {"title":"\u623f\u5c4b\u9762\u79ef VS\u4ef7\u683c","xaxis":{"title":"\u9762\u79ef\uff08\u5e73\u65b9\u7c73\uff09"},"yaxis":{"title":"\u4ef7\u683c\uff08\u4e07\u5143\uff09"}}, {});</script></div>
+</section>
+<section id="核心技能二必要数学知识" class="level2">
+<h2 class="anchored" data-anchor-id="核心技能二必要数学知识">核心技能二：必要数学知识</h2>
+<p>你不需要成为数学家，但需要理解算法背后的基本逻辑。</p>
+<ul>
+<li><strong>线性代数</strong>：理解向量、矩阵、矩阵乘法。这是理解数据在多维空间中表示和变换的基础。</li>
+<li><strong>微积分</strong>：重点是理解导数和偏导数的概念。它们是优化算法（如梯度下降）的核心，用于寻找模型的最佳参数。</li>
+<li><strong>概率与统计</strong>：理解均值、方差、标准差、概率分布、条件概率和贝叶斯定理。这对于评估模型、理解不确定性至关重要。</li>
+</ul>
 <div style="background-color:grey;height:2px;width:100%;"></div>
 <div></div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

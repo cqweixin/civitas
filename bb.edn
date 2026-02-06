@@ -6,6 +6,7 @@
   build (do (println "Removing public folder")
             (fs/delete-tree "public")
             (println "Rendering site folder")
+            (clojure "-M:clay -A:markdown")
             (shell "quarto render site")
             (println "Moving site/_site to public")
             (fs/move "site/_site" "public"))}}

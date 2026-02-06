@@ -5,7 +5,7 @@
  :subdirs-to-sync    ["src"]
  :keep-sync-root     false
  :flatten-targets    false
- :remote-repo        {:git-url "https://github.com/ClojureCivitas/clojurecivitas.github.io"
+ :remote-repo        {:git-url "https://github.com/cqweixin/civitas.git"
                       :branch  "main"}
  :hide-ui-header     true
  ;; :config/transform   civitas.db/expand-authors

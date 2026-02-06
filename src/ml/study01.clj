@@ -18,10 +18,14 @@
 ;; 在接触复杂的算法之前，你需要先搭建起支撑知识大厦的地基。
 ;; 这个阶段的目标是掌握必要的数学、编程和数据分析技能。
 
-;; 接下来我们可以看一个案例。
-;; 测试数据 house_prices.csv 文件内容：
+;; ## 核心技能一：编程语言（Clojure）
 
-^:kindly/hide-code
+;; 使用Clojure可以使我们更关注于业务本身而不是语法。
+
+;; 接下来我们可以看一个案例。
+
+;; 测试数据 house_prices内容：
+
 (def house-prices (csv/read-csv "面积,价格,房龄,卧室数,城市
 45,120,15,1,北京
 60,180,12,2,北京
@@ -51,9 +55,8 @@
 ^:kindly/hide-code
 (kind/table house-prices)
 
-;; 接下来，我们生成一些散点图
+;; 执行如下代码，我们可以生成一些散点图
 
-^:kindly/hide-code
 (let [data (map (partial zipmap [:size :price :age :room :city]) (rest house-prices))]
   (kind/plotly {:data [{:x (map :size data)
                         :y (map :price data)
@@ -66,3 +69,11 @@
                          :yaxis {:title "价格（万元）"}}
                 :style {:width "300px"
                         :height "300px"}}))
+
+;; ## 核心技能二：必要数学知识
+
+;; 你不需要成为数学家，但需要理解算法背后的基本逻辑。
+
+;; - **线性代数**：理解向量、矩阵、矩阵乘法。这是理解数据在多维空间中表示和变换的基础。
+;; - **微积分**：重点是理解导数和偏导数的概念。它们是优化算法（如梯度下降）的核心，用于寻找模型的最佳参数。
+;; - **概率与统计**：理解均值、方差、标准差、概率分布、条件概率和贝叶斯定理。这对于评估模型、理解不确定性至关重要。
